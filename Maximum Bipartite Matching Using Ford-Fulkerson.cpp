@@ -78,6 +78,6 @@ int main()
         cost[v+1][i]=0;
     }
     int ans=ford(0,v+1);//Assume source is 0 sink is v+1
-    cout<<"The maximum possible flow is= "<<ans<<endl;
+    cout<<"The maximum matching flow is= "<<ans<<endl;
     return 0;
 }
