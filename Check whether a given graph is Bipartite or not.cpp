@@ -9,7 +9,7 @@ int flip(int a)
     return (a==1)?-1:1;
 }
 
-void checkB(int a)
+bool BP(int a)
 {
     int isBipartite=1;//2 color that is 1 and -1
     queue<int>Q;
@@ -37,7 +37,22 @@ void checkB(int a)
             break;
         }
     }
-    (isBipartite)?cout<<"YES\n":cout<<"NO\n";
+    return (isBipartite)?true:false;
+}
+
+void checkB(int v)
+{
+    int flag=1;
+    for(int i=1;i<=v;i++){
+        if(!visit[i]){
+            if(BP(i)==false){
+                flag=0;
+                break;
+            }
+
+        }
+    }
+    (flag)?cout<<"YES\n":cout<<"NO\n";
 }
 
 int main()
@@ -49,6 +64,6 @@ int main()
         myvec[a].push_back(b);
         myvec[b].push_back(a);
     }
-    checkB(1);
+    checkB(v);
     return 0;
 }
