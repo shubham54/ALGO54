@@ -61,7 +61,7 @@ int main()
         V[a].push_back(b);
         V[b].push_back(a);
         cost[a][b]=c;
-        cost[b][c]=0;
+        cost[b][a]=0;
     }
     int ans=ford(0,v-1);//Assume source is 0 sink is v-1
     cout<<"The maximum possible flow is= "<<ans<<endl;
