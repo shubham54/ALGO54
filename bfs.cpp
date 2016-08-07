@@ -5,7 +5,7 @@ using namespace std;
 int visit[max];
 vector<int>myvec[max];
 
-void dfs(int a)
+void bfs(int a)
 {
     queue<int>myqueue;
     myqueue.push(a);
@@ -38,7 +38,7 @@ int main()
     }
     int source;
     cin>>source;
-    dfs(source);
+    bfs(source);
     return 0;
 }
 
